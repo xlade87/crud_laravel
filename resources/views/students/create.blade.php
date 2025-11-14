@@ -48,6 +48,11 @@
                 <label for="address" class="form-label">Dirección</label>
                 <textarea class="form-control" id="address" name="address" rows="2"></textarea>
             </div>
+            <div class="mb-3">
+                <label for="enrollment_year" class="form-label">Año de Ingreso *</label>
+                <input type="number" class="form-control" id="enrollment_year" name="enrollment_year" 
+                value="{{ date('Y') }}" min="1900" max="{{ date('Y') + 1 }}" required>
+            </div>
             <button type="submit" class="btn btn-success">💾 Guardar Estudiante</button>
         </form>
     </div>

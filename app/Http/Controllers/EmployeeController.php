@@ -25,6 +25,7 @@ class EmployeeController extends Controller
             'email' => 'required|email',
             'position' => 'required',
             'salary' => 'required|numeric',
+            'hire_date' => 'required|date',
         ]);
 
         Employee::create($request->all());

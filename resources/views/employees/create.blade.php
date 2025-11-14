@@ -35,6 +35,10 @@
                         <input type="number" step="0.01" class="form-control" id="salary" name="salary" required>
                     </div>
                 </div>
+                <div class="mb-3">
+                        <label for="hire_date" class="form-label">Fecha de Contratación *</label>
+                        <input type="date" class="form-control" id="hire_date" name="hire_date" required>
+                </div>
             </div>
             <button type="submit" class="btn btn-success">💾 Guardar Empleado</button>
         </form>
