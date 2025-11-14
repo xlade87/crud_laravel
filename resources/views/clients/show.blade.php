@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ver Cliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>👥 Información del Cliente</h1>
+        
+        <a href="{{ route('clients.index') }}" class="btn btn-secondary mb-3">↩️ Volver</a>
+
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><strong>ID:</strong> {{ $client->id }}</p>
+                        <p><strong>Nombre:</strong> {{ $client->name }}</p>
+                        <p><strong>Email:</strong> {{ $client->email }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong>Teléfono:</strong> {{ $client->phone ?? 'No especificado' }}</p>
+                        <p><strong>Empresa:</strong> {{ $client->company ?? 'No especificada' }}</p>
+                        <p><strong>Dirección:</strong> {{ $client->address ?? 'No especificada' }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <a href="{{ route('clients.edit', $client->id) }}" class="btn btn-warning">✏️ Editar</a>
+            <form action="{{ route('clients.destroy', $client->id) }}" method="POST" style="display: inline;">
+                @csrf
+                @method('DELETE')
+                <button type="submit" class="btn btn-danger" onclick="return confirm('¿Eliminar cliente?')">🗑️ Eliminar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
