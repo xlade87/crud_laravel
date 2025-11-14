@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('position'); 
-            $table->decimal('salary', 10, 2); 
+            $table->float('salary', 10, 2); 
             $table->date('hire_date')->nullable(); 
             $table->string('department')->nullable(); 
             $table->timestamps();
