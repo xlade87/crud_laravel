@@ -4,4 +4,5 @@ Enlace del proyecto de moonshine en produccion: https://panaderia-moonshine.ct.w
 
 credenciales del usuario administrador:
 email:admin@email.com
+
 contraseña: 12345678
