@@ -1,3 +1,3 @@
 Repositorio de github de proyecto con moonshine: https://github.com/xlade87/panaderia_Moonshine
 
-Enlace del proyecto en produccion: 
+Enlace del proyecto en produccion: https://panaderia-moonshine.ct.ws/panaderia/public/
